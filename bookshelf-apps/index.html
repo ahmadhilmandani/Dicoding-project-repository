@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+
+  <div id="container_ubah" style="display: none;">
+
+    <form id="konten_ubah">
+      <div class="tutup">
+        <i class="material-symbols-outlined">close</i>
+      </div>
+
+      <h1>Ubah data buku</h1>
+      <div>
+        <label for="ubahBookTitle">Judul</label>
+        <input id="ubahBookTitle" type="text" required name="judul">
+      </div>
+
+      <div>
+      <label for="ubahBookAuthor">Penulis</label>
+      <input id="ubahBookAuthor" type="text" required name="penulis">
+      </div>
+
+      <div>
+        <label for="ubahBookYear">Tahun terbit</label>
+        <input id="ubahBookYear" type="number" required name="tahun">
+      </div>
+      
+      <div class="genre_ubah">
+        <label for="genreUbah">Genre</label>
+        <select id="genreUbah" name="genreInput" required>
+          <option value="romance">romance</option>
+          <option value="slice of life">slice of life</option>
+          <option value="action">action</option>
+          <option value="crime">crime</option>
+          <option value="fiction">fiction</option>
+          <option value="nonfiction">nonfiction</option>
+          <option value="history">history</option>
+          <option value="biography">biography</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="ubahBookIsComplete">Selesai dibaca</label>
+        <input id="ubahBookIsComplete" type="checkbox" name="selesai_dibaca">
+      </div>
+
+      <div>
+        <button id="bookUbah" type="submit" name="submit_ubah_buku">Ubah</button>
+      </div>
+      
+    </form>
+  </div>
+
+  <header class="head_bar">
+    <h1 class="head_bar__title">Bookshelf Apps</h1>
+  </header>
+
+  <main>
+    <section class="input_section">
+      <h2>Masukkan Buku Baru</h2>
+
+      <form id="inputBook">
+
+        <input id="inputBookTitle" type="text" required value="" placeholder="Judul" name="judul">
+
+        <input id="inputBookAuthor" type="text" required value="" placeholder="Penulis" name="penulis">
+
+        <input id="inputBookYear" type="number" required value="" placeholder="Tahun terbit" name="tahun">
+
+        <label for="genreInput">Genre</label>
+        <select id="genreInput" name="genreInput" class="genre_input" required value="">
+          <option value="romance">romance</option>
+          <option value="slice of life">slice of life</option>
+          <option value="action">action</option>
+          <option value="crime">crime</option>
+          <option value="fiction">fiction</option>
+          <option value="nonfiction">nonfiction</option>
+          <option value="history">history</option>
+          <option value="biography">biography</option>
+        </select>
+
+        <label for="inputBookIsComplete">Selesai dibaca</label>
+        <input id="inputBookIsComplete" type="checkbox" name="selesai_dibaca">
+
+        <button id="bookSubmit" type="submit" name="submit_tambah_buku">Input</button>
+      </form>
+
+    </section>
+
+    <section class="book_shelf">
+
+      <div class="book_shelf_first_child">
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookshelfList" class="book_list">
+          <div>
+            <div class="top_judul">Judul</div>
+            <div class="top_penulis">Penulis</div>
+            <div class="top_tahun">Tahun</div>
+            <div class="top_genre">Genre</div>
+            <div class="top_aksi">Aksi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book_shelf_second_child">
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookshelfList" class="book_list">
+          <div>
+            <div class="top_judul">Judul</div>
+            <div class="top_penulis">Penulis</div>
+            <div class="top_tahun">Tahun</div>
+            <div class="top_genre">Genre</div>
+            <div class="top_aksi">Aksi</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+
+</body>
+
+</html>

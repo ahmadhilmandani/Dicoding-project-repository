@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--black-color);
+}
+
+:root {
+    --white-color: #fff;
+    --purple-color: #5D21D2;
+    --light-purple-color: #EEE8FA;
+    --red-color: #ed83a5;
+    --light-red-color: rgb(254, 231, 231);
+    --yellow-color: #dbcf1e;
+    --light-yellow-color: rgb(255, 253, 235);
+ 
+    --darker-grey-color: #d8d8d8;
+    --grey-color: #F6F7FA;
+    --black-color: #45505B;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--grey-color);
+    padding: 24px;
+}
+#container_ubah{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #45505bb3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#container_ubah h1{
+    color: var(--purple-color);
+    text-align: center;
+}
+#container_ubah>#konten_ubah{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 550px;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), ;
+    background-color: var(--white-color);
+    position: relative;
+}
+#konten_ubah > div{
+    margin-top: 16px;
+}
+#konten_ubah select{
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+.tutup{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+#konten_ubah input, #konten_ubah select, #konten_ubah button{
+    background-color: var(--grey-color);
+    border: 1px solid var(--darker-grey-color);
+    border-radius: 20px;
+    padding: 3px 6px;
+    width: 100%;
+    margin-inline: auto;
+    display: block;
+}
+#konten_ubah #ubahBookIsComplete, #konten_ubah[for='ubahBookIsComplete']{
+    width: 50px;
+    display: inline-block;
+}
+#konten_ubah input, #konten_ubah select, #konten_ubah button,  #konten_ubah label{
+    font-size: 13px;
+} 
+#konten_ubah #bookUbah{
+    padding: 9px;
+    color: var(--white-color);
+    background-color: var(--purple-color);
+}
+input, button {
+    font-size: 12px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+}
+
+.input_section {
+    margin-top: 24px;
+}
+
+.input_section>form input{
+    display: inline-block;
+    padding: 5px 1px 5px 10px;
+    margin-left: 8px;
+    border: 1.3px solid var(--darker-grey-color);
+    border-radius: 8px;
+}
+
+input[placeholder="Judul"]{
+    width: 240px;
+}
+input[placeholder="Penulis"]{
+    width: 240px;
+}
+input[placeholder="Tahun terbit"]{
+    width: 120px;
+}
+
+.input_section>form label{
+    margin-left: 8px;
+    font-size: 12px;
+}
+.input_section>form input[type="checkbox"]{
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.input_section button[type=submit]{
+    padding: 8px;
+    text-align: center;
+    background-color: var(--purple-color);
+    border: 0;
+    outline: 0;
+    width: 150px;
+    color: var(--white-color);
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.input_section button[type=submit]:hover{
+    cursor: pointer;
+    transform:  translateY(-3px) scale(1.05);
+}
+.genre_input{
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: lighter;
+    font-style: italic;
+    border-radius: 18px;
+    border-color: var(--darker-grey-color);
+    margin-inline: 6px;
+    text-transform: capitalize;
+}
+.book_shelf {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 24px;
+
+}
+.book_shelf>div{
+    width: 49%;
+
+    border: 1px solid var(--darker-grey-color);
+    border-radius: 10px;
+    background-color: var(--white-color);
+    padding: 24px;   
+}
+
+.book_list>div{
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+    border-bottom: 1px solid var(--darker-grey-color);
+}
+.judul, .top_judul{
+    width: 125px;
+    padding: 8px 8px 8px 0px;
+    margin-right: 8px;
+}
+.penulis, .top_penulis{
+    width: 125px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 8px 8px 8px 0px;
+    margin-right: 8px;
+}
+.tahun, .top_tahun{
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 8px;
+}
+
+.genre, .top_genre{
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 8px;
+}
+.top_aksi{
+    width: 100px;
+}
+.genre span{
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: lighter;
+    font-style: italic;
+    margin-right: 3px;
+    border: 1px solid var(--darker-grey-color);
+    border-radius: 16px;
+}
+
+.book_shelf>.book_list>.book_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.ubah, .hapus, .belum_selesai, div[data-selesai]{
+    display: flex;
+    margin-left: 8px;
+    text-align: center;
+}
+.ubah{
+    margin-left: 0;
+}
+.material-symbols-outlined{
+    padding: 4px;
+    border-radius: 4px;
+}
+ div[data-selesai] .material-symbols-outlined{
+    font-size: 14px;
+    background-color: var(--light-purple-color);
+    color: var(--purple-color);
+}
+.ubah .material-symbols-outlined{
+    font-size: 14px;
+    background-color: var(--light-yellow-color);
+    color: var(--yellow-color);
+}
+.hapus .material-symbols-outlined{
+    font-size: 14px;
+    background-color: var(--light-red-color);
+    color: var(--red-color);
+}
+div[data-selesai="false"] .material-symbols-outlined{
+    font-size: 14px;
+    background-color: var(--grey-color);
+    color: var(--darker-grey-color);
+}
+
+.ubah .material-symbols-outlined:hover, .hapus .material-symbols-outlined:hover, div[data-selesai] .material-symbols-outlined:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
